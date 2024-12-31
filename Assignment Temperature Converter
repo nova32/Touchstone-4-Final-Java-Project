@@ -1,0 +1,54 @@
+import java.util.Scanner;
+//let us take user input
+
+// Create a temperature conversion that can be used in enviornments with different temperatures
+// Check for user input
+// 1 - create F to C converter
+// 2 - create C to F converter
+// 3 error check
+
+public class TempConverter {
+
+    public static void main(String[] args) {
+    
+    Scanner scan = new Scanner(System.in);
+    System.out.println("Fahrenheit to Celsius (1) or Celsius to Fahrenheit(2)");
+    int result = scan.nextInt();
+    //Ask the user to pick an option
+
+    if (result == 1) {
+        //calculate F to C
+
+        System.out.println("Fahrenheit to Celsius  - Conversion");
+        System.out.println("Enter Farenheit");
+        double value = scan.nextDouble();
+        double ValueFinal = (value - 32) * 5/9;
+        //F to C formula
+        System.out.print("Celsius is: ");
+        System.out.println((ValueFinal)); //*10.0/10.0 - rounding to final value (optional)
+
+    }
+
+    else if (result == 2) {
+        //calculate C to F
+        
+        System.out.println("Celsius to Fahrenheit - Conversion");
+        System.out.println("Enter Celcius");
+        double value = scan.nextDouble();
+        double ValueFinal = (value * 9/5) + 32;
+        //C to F formula
+        System.out.print("Celsius is: ");
+        System.out.println((ValueFinal));
+
+    }
+
+    else {
+        System.out.println("Not Valid");
+        //Any number that is not 1 or 2, error checking
+    }
+
+
+}
+
+
+}
